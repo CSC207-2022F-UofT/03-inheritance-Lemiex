@@ -18,21 +18,15 @@ class BagMain {
         for(Bag bag : bags){
             if (bag instanceof HandBag){
                 ((HandBag) bag).enhance();
-            }
-            else if (bag instanceof CrossbodyBag){
-                ((CrossbodyBag) bag).enhance();
-            }
-
-        }
-        if(double_enhance_handbags){
-            for(Bag bag : bags){
-                if (bag instanceof HandBag){
+                if(double_enhance_handbags){
                     ((HandBag) bag).enhance();
                 }
-                else if (bag instanceof CrossbodyBag){
+            }
+            else if (bag instanceof CrossbodyBag) {
+                ((CrossbodyBag) bag).enhance();
+                if (double_enhance_handbags) {
                     ((CrossbodyBag) bag).enhance();
                 }
-
             }
         }
     }
