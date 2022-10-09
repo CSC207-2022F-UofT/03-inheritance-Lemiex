@@ -19,7 +19,9 @@ class BagMain {
             bag.enhance();
         }
         if(double_enhance_handbags){
-            enhanceBags(bags, false);
+            for(Bag bag : bags){
+                bag.enhance();
+            }
         }
     }
 

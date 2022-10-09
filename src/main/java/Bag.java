@@ -108,7 +108,7 @@ public abstract class Bag {
             return null;
         }
         else{
-            String popped = this.contents[this.numberOfContents];
+            String popped = this.contents[this.numberOfContents  - 1];
             String[] contentCopy = new String[this.numberOfContents - 1];
             for(int i = 0; i < this.numberOfContents - 1; i++){
                 contentCopy[i] = this.contents[i];
