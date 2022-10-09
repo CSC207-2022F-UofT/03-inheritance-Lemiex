@@ -16,18 +16,10 @@ class BagMain {
      */
     public static void enhanceBags(Bag[] bags, boolean double_enhance_handbags) {
         for(Bag bag : bags){
-            if (bag instanceof HandBag){
-                ((HandBag) bag).enhance();
-                if(double_enhance_handbags == true){
-                    ((HandBag) bag).enhance();
-                }
+            if (double_enhance_handbags && bag instanceof HandBag){
+                bag.enhance();
             }
-            else if (bag instanceof CrossbodyBag) {
-                ((CrossbodyBag) bag).enhance();
-                if (double_enhance_handbags == true) {
-                    ((CrossbodyBag) bag).enhance();
-                }
-            }
+            bag.enhance();
         }
     }
 
